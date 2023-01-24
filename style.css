@@ -6,11 +6,21 @@ body{
     margin: 0px;
     background-color: #e6f4f5;
     font-family: sans-serif;
+    overflow: scroll;
 }
+/* Container */
 
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: scroll;
+    gap: calc(20px + 1vh);
+}
 /*Navbar*/
 
 header{
+    flex:0.5;
     display: flex;
     padding: calc(10px + 1vh);
     background-color: white;
@@ -63,12 +73,31 @@ nav div{
     background-color: lightgrey;
 }
 
+/* Main */
+
+main{
+    flex: 5;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    justify-content: center;
+    gap: calc(10px + 1vw);
+    grid-auto-rows: 300px;
+    padding: 1% 10%;
+    
+}
+main div{
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px lightgray;
+    background-color: white;
+}
+
 /* Footer */
+
 footer{
+    flex-direction: 1;
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 10px;
     width: 100%;   
     font-size: calc(8px + 0.8vw);
+    color: darkslategray;
 }
