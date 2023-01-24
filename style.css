@@ -62,3 +62,13 @@ nav div{
 #log-in:hover{
     background-color: lightgrey;
 }
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;   
+    font-size: calc(8px + 0.8vw);
+}
