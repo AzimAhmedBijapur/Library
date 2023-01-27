@@ -1,5 +1,3 @@
-const Library = [];
-
 function Book(title, author, pages) {
   this.title = title;
   this.author = author;
@@ -27,16 +25,57 @@ Book.prototype.addBookToLibrary = function () {
   isRead.textContent = 'Not Read';
   isRead.classList.add('not-read');
   newDiv.appendChild(isRead);
+  isRead.addEventListener('click', () => {
+    if (isRead.getAttribute('class') === 'not-read') {
+      isRead.textContent = 'Read';
+      isRead.classList.remove('not-read');
+      isRead.classList.add('read');
+    } else {
+      isRead.textContent = 'Not Read';
+      isRead.classList.remove('read');
+      isRead.classList.add('not-read');
+    }
+  });
 
   const del = document.createElement('button');
   del.textContent = 'Delete';
   del.classList.add('delete-it');
   newDiv.appendChild(del);
+  del.addEventListener('click', () => {
+    del.parentElement.remove();
+  });
 
   mainContent.appendChild(newDiv);
 };
 
-function addCard() {
-  const book = new Book('jungle book', 'j k rowling', 295);
-  book.addBookToLibrary();
+// eslint-disable-next-line no-unused-vars
+function showModal() {
+  const modal = document.querySelector('.modal-form');
+  const overlay = document.querySelector('.overlay');
+  overlay.style.visibility = 'visible';
+  modal.style.visibility = 'visible';
+}
+function closeModal() {
+  const modal = document.querySelector('.modal-form');
+  const overlay = document.querySelector('.overlay');
+  modal.style.visibility = 'hidden';
+  overlay.style.visibility = 'hidden';
+}
+
+// eslint-disable-next-line no-unused-vars
+function fetchData() {
+  const getTitle = document.querySelector('#title').value;
+  const getAuthor = document.querySelector('#author').value;
+  const getPages = document.querySelector('#pages').value;
+  if (getTitle !== '' && getAuthor !== '' && getPages !== '') {
+    const book = new Book(getTitle, getAuthor, getPages);
+    book.addBookToLibrary();
+    closeModal();
+  } else {
+    // eslint-disable-next-line no-alert
+    alert('Enter data in all the fields');
+  }
+  document.querySelector('#title').value = '';
+  document.querySelector('#author').value = '';
+  document.querySelector('#pages').value = '';
 }

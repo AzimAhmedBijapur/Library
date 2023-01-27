@@ -15,7 +15,20 @@
                 <div class="nav-title">Library</div>
                 <div class="nav-div-two">
                     <div>
-                        <button id="add-button"><img src="./image/plus.svg" alt="add" onclick="addCard()"></button>
+                        <button id="add-button"><img src="./image/plus.svg" alt="add" onclick="showModal()"></button>
+                        <div class="modal-form">
+                            <div>
+                                <input type="text" id="title" name="title" placeholder="  title" required>
+                            </div>
+                            <div>
+                                <input type="text" id="author" name="author" placeholder="  author">
+                            </div>
+                            <div>
+                                <input type="number" id="pages" name="pages" placeholder="  pages" required>
+                            </div>
+                            <div><button id="sub" type="submit" onclick="fetchData()">Ok</button></div>
+                        </div>
+                        <div class="overlay"></div>
                     </div>
                     <div>
                         <button id="log-in">Log in</button>
