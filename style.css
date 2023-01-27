@@ -2,12 +2,20 @@
     border: 2px solid red;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin&display=swap');
-
+@font-face {
+    font-family: anton-cabin;
+    src: url('./fonts/anton-cabin/Cabin/Cabin-VariableFont_wdth\,wght.ttf');
+}
 body{
     margin: 0px;
     background-color: #beffa6;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'anton-cabin';
+}
+button{
+    font-family: 'anton-cabin';
+}
+input{
+    font-family: 'anton-cabin';
 }
 /* Container */
 

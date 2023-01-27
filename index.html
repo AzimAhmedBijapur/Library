@@ -18,10 +18,11 @@
                         <button id="add-button"><img src="./image/plus.svg" alt="add" onclick="showModal()"></button>
                         <div class="modal-form">
                             <div>
-                                <input type="text" id="title" name="title" placeholder="  title" required>
+                                <input type="text" id="title" name="title" placeholder="  title" >
                             </div>
                             <div>
-                                <input type="text" id="author" name="author" placeholder="  author">
+                                <input type="text" id="author" name="author" placeholder="  author" onkeypress="return (event.charCode > 64 && 
+                                event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
                             </div>
                             <div>
                                 <input type="number" id="pages" name="pages" placeholder="  pages" required>

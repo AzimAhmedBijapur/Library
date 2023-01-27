@@ -71,11 +71,11 @@ function fetchData() {
     const book = new Book(getTitle, getAuthor, getPages);
     book.addBookToLibrary();
     closeModal();
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#pages').value = '';
   } else {
     // eslint-disable-next-line no-alert
     alert('Enter data in all the fields');
   }
-  document.querySelector('#title').value = '';
-  document.querySelector('#author').value = '';
-  document.querySelector('#pages').value = '';
 }
