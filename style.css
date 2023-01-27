@@ -2,10 +2,15 @@
     border: 2px solid red;
 } */
 
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin&display=swap');
+
 body{
     margin: 0px;
     background-color: #beffa6;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Cabin', sans-serif;
 }
 /* Container */
 
@@ -55,19 +60,20 @@ nav div{
     border-radius: 9999px;
 }
 #log-in{
-    height: calc(10px + 3vh);
+    height: calc(8px + 3vh);
     width: calc(40px + 3vw);
     font-size: calc(6px + 0.8vw);
-    /* font-weight: 600; */
     border-radius: calc(3px + 0.5vh);
     border: 0px;
-    font-family: sans-serif;
+    font-family: 'Cabin', sans-serif;
+    background-color: black;
+    color: white;
 }
 #add-button:hover{
     background-color: lightgrey;
 }
 #log-in:hover{
-    background-color: lightgrey
+    background-color: darkslategrey
 }
 
 /* Main */
@@ -99,6 +105,8 @@ main div button{
     border-radius: calc(2px + 1vh);
     font-size: calc(8px + 1vh);
     font-weight:bold ;
+    font-family: 'Cabin', sans-serif;
+    
 }
 .title-of-book{
     font-weight: bolder;
@@ -112,11 +120,11 @@ main div button{
     background-color: #bf3102;
 }
 .delete-it{
-    background-color: darkslategray;
+    background-color: black;
     color: white;
 }
 .delete-it:hover{
-    background-color: black;
+    background-color: darkslategrey;
 }
 /* Footer */
 
@@ -126,7 +134,7 @@ footer{
     justify-content: center;
     width: 100%;   
     font-size: calc(8px + 0.8vw);
-    color: darkslategray;
+    color: black;
     margin-bottom: 10px;
 }
 

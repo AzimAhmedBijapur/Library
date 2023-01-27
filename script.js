@@ -5,16 +5,11 @@ function Book(title, author, pages) {
   this.author = author;
   this.pages = pages;
 }
-let count = 0;
 
-function afterRemove() {
-}
-
+// eslint-disable-next-line func-names
 Book.prototype.addBookToLibrary = function () {
   const mainContent = document.querySelector('main');
   const newDiv = document.createElement('div');
-  count += 1;
-  newDiv.setAttribute('data-key', `${count}`);
   const titleOfBook = document.createElement('div');
   titleOfBook.textContent = this.title;
   titleOfBook.classList.add('title-of-book');
@@ -36,23 +31,12 @@ Book.prototype.addBookToLibrary = function () {
   const del = document.createElement('button');
   del.textContent = 'Delete';
   del.classList.add('delete-it');
-  del.setAttribute('data-key', `${count}`);
   newDiv.appendChild(del);
 
-  // Event listener for delete button
-  del.addEventListener('click', () => {
-    // afterRemove(count);
-  });
-  Library.push(newDiv);
-
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < Library.length; i++) {
-    mainContent.appendChild(Library[i]);
-  }
+  mainContent.appendChild(newDiv);
 };
 
-const addButton = document.querySelector('#add-button');
-addButton.addEventListener('click', () => {
-  const book = new Book('Jungle Book', 'J. K. rowling', 295);
+function addCard() {
+  const book = new Book('jungle book', 'j k rowling', 295);
   book.addBookToLibrary();
-});
+}
